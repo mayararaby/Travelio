@@ -1,18 +1,18 @@
-import React, { useState ,ChangeEvent  } from 'react'
+import React, { useState, ChangeEvent } from 'react'
 import TextField from '@mui/material/TextField';
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import SnackbarCustom from '../../snackbarCustom/snackbarCustom';
 import { mailFormulaValidation } from '../../../common/helpers';
 import Stack from '@mui/material/Stack';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
-import {setUserInfo} from '../../../redux/actions/index'
-import { SecondStepProps ,FormData } from './interfaces';
-import { Flight  } from '../../../common/interfaces';
+import { setUserInfo } from '../../../redux/actions/index'
+import { SecondStepProps, FormData } from './interfaces';
+import { Flight } from '../../../common/interfaces';
 import { CustomButton } from '../../customButton/customButton';
-export default function SecondStep(props:SecondStepProps) {
-  const {selectedFlight}: {selectedFlight:Flight} = props
+export default function SecondStep(props: SecondStepProps) {
+  const { selectedFlight }: { selectedFlight: Flight } = props
 
-  const { flightTickets, bookedTickets } :{ flightTickets:number, bookedTickets:number }  = selectedFlight
+  const { flightTickets, bookedTickets }: { flightTickets: number, bookedTickets: number } = selectedFlight
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -22,9 +22,9 @@ export default function SecondStep(props:SecondStepProps) {
     departureTime: selectedFlight.departureTime,
   });
 
-  
+
   const [showSnack, setShowSnack] = useState<boolean>(false)
-  const [snackMessage, setSnackMessage] = useState <string>('')
+  const [snackMessage, setSnackMessage] = useState<string>('')
 
   const dispatch = useDispatch();
   /**
@@ -47,12 +47,12 @@ export default function SecondStep(props:SecondStepProps) {
    * @returns {void}
    */
   const handelSubmit = () => {
-    if(!validateFields(formData)){
+    if (!validateFields(formData)) {
       setSnackMessage('Please complete all required fields')
       setShowSnack(true)
       return
     }
-    dispatch(setUserInfo({formData,nextStep:true}))
+    dispatch(setUserInfo({ formData, nextStep: true }))
   }
 
   /**
@@ -60,63 +60,65 @@ export default function SecondStep(props:SecondStepProps) {
    * @param {FormData} formData user main information 
    * @returns {boolean}
    */
-  const validateFields =(formData:FormData)=>{
-    const {firstName, lastName ,email,mobileNumber} = formData
-    if (firstName==='' || lastName==='' || mobileNumber==='' ||mailFormulaValidation(email).error) return false
+  const validateFields = (formData: FormData) => {
+    const { firstName, lastName, email, mobileNumber } = formData
+    if (firstName === '' || lastName === '' || mobileNumber === '' || mailFormulaValidation(email).error) return false
     return true
   }
 
   return (
     <>
-      <div className='bookInfo'>
-        <TextField className='bookInfoInlineInput'
-          error={formData.firstName === ""}
-          helperText={formData.firstName === "" ? 'Empty field!' : ' '}
-          onChange={handleChange} name='firstName'
-          value={formData.firstName}
-          id="outlined-basic" label="First Name *" variant="outlined" />
-      </div>
-      <div className='bookInfo'>
+      <div className='userInfoContainer'>
+        <div className='bookInfo'>
+          <TextField className='bookInfoInlineInput'
+            error={formData.firstName === ""}
+            helperText={formData.firstName === "" ? 'Empty field!' : ' '}
+            onChange={handleChange} name='firstName'
+            value={formData.firstName}
+            id="outlined-basic" label="First Name *" variant="outlined" />
+        </div>
+        <div className='bookInfo'>
 
-        <TextField className='bookInfoInlineInput'
-          error={formData.lastName === ""}
-          helperText={formData.lastName === "" ? 'Empty field!' : ' '}
-          onChange={handleChange} name='lastName' value={formData.lastName}
-          id="outlined-basic" label="Second Name *"
-          variant="outlined" />
-      </div>
-      <div className='bookInfo'>
-        <TextField
-          error={formData.mobileNumber === ""}
-          helperText={formData.mobileNumber === "" ? 'Empty field!' : ' '}
-          onChange={handleChange} name='mobileNumber'
-          type="number" value={formData.mobileNumber}
-          className="bookInfoInlineInput" id="outlined-basic"
-          label="Mobile Number *" variant="outlined" />
-      </div>
-      <div className='bookInfo'>
-        <TextField
-          error={mailFormulaValidation(formData.email).error}
-          helperText={mailFormulaValidation(formData.email).message}
-          onChange={handleChange} name='email' type="email" value={formData.email}
-          className="bookInfoInlineInput" id="outlined-basic" label="Email *"
-          variant="outlined" />
-      </div>
+          <TextField className='bookInfoInlineInput'
+            error={formData.lastName === ""}
+            helperText={formData.lastName === "" ? 'Empty field!' : ' '}
+            onChange={handleChange} name='lastName' value={formData.lastName}
+            id="outlined-basic" label="Second Name *"
+            variant="outlined" />
+        </div>
+        <div className='bookInfo'>
+          <TextField
+            error={formData.mobileNumber === ""}
+            helperText={formData.mobileNumber === "" ? 'Empty field!' : ' '}
+            onChange={handleChange} name='mobileNumber'
+            type="number" value={formData.mobileNumber}
+            className="bookInfoInlineInput" id="outlined-basic"
+            label="Mobile Number *" variant="outlined" />
+        </div>
+        <div className='bookInfo'>
+          <TextField
+            error={mailFormulaValidation(formData.email).error}
+            helperText={mailFormulaValidation(formData.email).message}
+            onChange={handleChange} name='email' type="email" value={formData.email}
+            className="bookInfoInlineInput" id="outlined-basic" label="Email *"
+            variant="outlined" />
+        </div>
 
-      <div className='bookInfo'>
-        <TextField onChange={handleChange}
-          error={formData.tickets > flightTickets - bookedTickets}
-          helperText={formData.tickets> flightTickets - bookedTickets ? 'Empty field!' : ' '}
-          name='tickets' type="number" value={formData.tickets}
-          className="bookInfoInlineInput" id="outlined-basic"
-          label="Number of tickets *" variant="outlined" />
-      </div>
+        <div className='bookInfo'>
+          <TextField onChange={handleChange}
+            error={formData.tickets > flightTickets - bookedTickets}
+            helperText={formData.tickets > flightTickets - bookedTickets ? 'Empty field!' : ' '}
+            name='tickets' type="number" value={formData.tickets}
+            className="bookInfoInlineInput" id="outlined-basic"
+            label="Number of tickets *" variant="outlined" />
+        </div>
 
-      <Stack direction="row" spacing={2}>
-        <CustomButton variant="contained" endIcon={<HowToRegIcon />} onClick={handelSubmit}>
-          Next
-        </CustomButton>
-      </Stack>
+        <Stack direction="row" spacing={2}>
+          <CustomButton variant="contained" endIcon={<HowToRegIcon />} onClick={handelSubmit}>
+            Next
+          </CustomButton>
+        </Stack>
+      </div>
       {showSnack && <SnackbarCustom statue='error' open={showSnack} setOpen={setShowSnack} message={snackMessage} />}
     </>
   )

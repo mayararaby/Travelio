@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom';
 import { ThirdStepProps } from './interfaces';
 import { Flight, ReducerState, UserInfo, UserInfoFormData } from '../../../common/interfaces';
 import { CustomButton } from '../../customButton/customButton';
+import { covertToTimeString } from '../../../common/helpers';
+
 export default function ThirdStep(props: ThirdStepProps) {
 
   const [showSnack, setShowSnack] = React.useState<boolean>(false)
@@ -82,6 +84,8 @@ export default function ThirdStep(props: ThirdStepProps) {
 
     }, 1000);
   }
+
+
   return (
     <div className='previewInformation'>
       <Card >
@@ -148,15 +152,19 @@ export default function ThirdStep(props: ThirdStepProps) {
 
             <Typography variant="subtitle1" color="text.secondary" >
               <div className="airPlaneConfirmationContainer">
-                <span>Arrival Time</span>
-                <span>{arrivalTime} </span>
+                <span>Arrival</span>
+                <span>
+                  {covertToTimeString(arrivalTime)}
+                </span>
               </div>
             </Typography>
 
             <Typography variant="subtitle1" color="text.secondary">
               <div className="airPlaneConfirmationContainer">
-                <span>Departure Time</span>
-                <span>{departureTime} </span>
+                <span>Departure</span>
+                <span>
+                  {covertToTimeString(departureTime)}
+                </span>
               </div>
             </Typography>
             <div className='confirmButtonContainer'>

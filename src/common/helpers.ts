@@ -40,3 +40,13 @@ export const mailFormulaValidation = (email: string): { message: string, error: 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return !emailRegex.test(email) ? { message: 'Not Valid email', error: true } : { message: '', error: false }
 }
+
+/**
+ * change date string to formatted date easy to user to got it 
+ * @param dateString 
+ * @returns {date} formatted date
+ */
+export const covertToTimeString = (dateString: string) => {
+  const date: Date = new Date(dateString);
+  return date.toISOString().replace("T", " ").replace(/\.\d{3}Z/, "");
+}

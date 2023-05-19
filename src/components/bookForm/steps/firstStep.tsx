@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 import {FirstStepProps} from './interfaces'
 import { Flight } from '../../../common/interfaces';
 import { CustomButton } from '../../customButton/customButton';
-
+import { covertToTimeString } from '../../../common/helpers';
 export default function FirstStep(props:FirstStepProps) {
   const [departureTime, setDepartureTime] = useState<number>(0);
   const [showSnack, setShowSnack] = useState<boolean>(false)
@@ -38,7 +38,7 @@ export default function FirstStep(props:FirstStepProps) {
     return flight.map((oneFlight) => {
       return (
         <MenuItem key={oneFlight.id} value={oneFlight.id as number}>
-          {oneFlight.departureTime}
+          {covertToTimeString(oneFlight.departureTime)}
         </MenuItem>
       );
     });

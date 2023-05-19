@@ -3,8 +3,9 @@
 }
 .bookInfo,.previewInformation{
   margin:var(--main-margin-small);
-  width: 70%;
-
+}
+.previewInformation{
+  min-width: 60%;
 }
 .bookInfoInlineInput{
   width: 100%;
@@ -47,4 +48,8 @@
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
 .css-4ff9q7.Mui-completed{
   color: var(--success-color) !important;
+}
+
+.userInfoContainer{
+  width: 70%;
 }
