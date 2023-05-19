@@ -1,17 +1,28 @@
 :root {
-  --background-color:#fcfaf7;
-  --success-color :#4BB543;
-  --main-color :#f39c12;
-  --main-color-hover :#b4750e;
-  --border-radius :3px;
-  --main-margin-large :20px;
-  --main-margin-small :10px
-
+  --background-color: #fcfaf7;
+  --success-color: #4BB543;
+  --main-color: #f39c12;
+  --main-color-hover: #b4750e;
+  --border-radius: 3px;
+  --main-margin-large: 20px;
+  --main-margin-small: 10px
 }
 
-html,.App,#root{
+@font-face {
+  font-family: 'Lilita One', cursive;
+  ;
+  src: url('./assets/Fonts/Almarai-Bold.ttf'),
+    url('./assets/Fonts/Almarai-ExtraBold.ttf'),
+    url('./assets/Fonts/Almarai-Light.ttf'),
+    url('./assets/Fonts/Almarai-Regular.ttf');
+}
+
+html,
+.App,
+#root {
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -21,7 +32,7 @@ body {
 
 }
 
-.imageSize{
+.imageSize {
   max-width: 100%;
 }
 

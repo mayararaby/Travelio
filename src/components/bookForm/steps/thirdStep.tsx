@@ -11,18 +11,18 @@ import { setMockedData, setSelectedTrip, setAvailableTrip, setUserInfo } from '.
 import SnackbarCustom from '../../snackbarCustom/snackbarCustom';
 import { useNavigate } from 'react-router-dom';
 import { ThirdStepProps } from './interfaces';
-import { Flight,ReducerState,UserInfo,UserInfoFormData} from '../../../common/interfaces';
+import { Flight, ReducerState, UserInfo, UserInfoFormData } from '../../../common/interfaces';
 
-export default function ThirdStep(props:ThirdStepProps) {
-  
+export default function ThirdStep(props: ThirdStepProps) {
+
   const [showSnack, setShowSnack] = React.useState<boolean>(false)
   const [snackMessage, setSnackMessage] = React.useState<string>('')
 
-  const {selectedFlight, userInfo}: {selectedFlight:Flight ,  userInfo :UserInfo} = props
+  const { selectedFlight, userInfo }: { selectedFlight: Flight, userInfo: UserInfo } = props
   const { firstName, lastName, mobileNumber, email, tickets }: UserInfoFormData = userInfo.formData
-  const { price, departureAirport, arrivalAirport, arrivalTime, flightNumber, id ,departureTime }:Flight = selectedFlight
+  const { price, departureAirport, arrivalAirport, arrivalTime, flightNumber, id, departureTime }: Flight = selectedFlight
 
-  const mockedData = useSelector((state:ReducerState) => state.mockedData)
+  const mockedData = useSelector((state: ReducerState) => state.mockedData)
   const Dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -30,7 +30,7 @@ export default function ThirdStep(props:ThirdStepProps) {
   const handelConfirmation = () => {
     const flightsAfterConfirmation = mockedData?.map(flight => {
       if (flight.id === id) {
-        const availableTickets = flight.bookedTickets + tickets
+        const availableTickets = Number(flight.bookedTickets) + Number(tickets)
         return {
           ...flight,
           bookedTickets: availableTickets
@@ -38,6 +38,7 @@ export default function ThirdStep(props:ThirdStepProps) {
       }
       return flight
     })
+
     Dispatch(setMockedData(flightsAfterConfirmation))
     setSnackMessage('Confirmed')
     setShowSnack(true)

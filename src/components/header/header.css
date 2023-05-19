@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cookie&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cookie&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap'); */
 .mainHeaderContainer {
   display: flex;
   justify-content: space-between;
@@ -32,19 +32,21 @@
   font-weight: bold;
   justify-items: 50%;
   font-size: 90px;
-  color: var(--main-color)
+  color: var(--main-color);
+  text-align: center;
+
 
 }
 
 .titleDescription {
+  font-family: 'Lilita One', cursive;
+  text-align: center;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  font-family: 'Cookie', cursive;
-
 }
 
 .travel{
