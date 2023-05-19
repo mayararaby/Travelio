@@ -1,0 +1,10 @@
+.mainErrorContainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.errorPage{
+  min-height: 95%;
+}
