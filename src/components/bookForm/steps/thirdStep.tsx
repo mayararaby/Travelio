@@ -131,7 +131,7 @@ export default function ThirdStep(props: ThirdStepProps) {
 
             <Typography variant="subtitle1" color="text.secondary" >
               <div className="airPlaneConfirmationContainer">
-                <span>Mobile Number</span>
+                <span>Phone</span>
                 <span>{mobileNumber} </span>
               </div>
             </Typography>
