@@ -28,7 +28,7 @@ export default function Home () {
     <>
 
       <div className='pageContent'>
-        <Header name={'Travelio'} />
+        <Header name={'TRAVELIO'} />
         {
           Object.keys(availableTrips).length
             ? <>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 :root {
   --background-color: #fcfaf7;
   --success-color: #4BB543;
@@ -6,15 +8,6 @@
   --border-radius: 3px;
   --main-margin-large: 20px;
   --main-margin-small: 10px
-}
-
-@font-face {
-  font-family: 'Lilita One', cursive;
-  ;
-  src: url('./assets/Fonts/Almarai-Bold.ttf'),
-    url('./assets/Fonts/Almarai-ExtraBold.ttf'),
-    url('./assets/Fonts/Almarai-Light.ttf'),
-    url('./assets/Fonts/Almarai-Regular.ttf');
 }
 
 html,
@@ -29,6 +22,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  font-family: 'Lilita One', cursive;
 
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,ChangeEvent  } from 'react'
+import React, { useState ,ChangeEvent  } from 'react'
 import TextField from '@mui/material/TextField';
 import { useDispatch} from "react-redux";
 import SnackbarCustom from '../../snackbarCustom/snackbarCustom';
@@ -8,9 +8,9 @@ import Stack from '@mui/material/Stack';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import {setUserInfo} from '../../../redux/actions/index'
 import { SecondStepProps ,FormData } from './interfaces';
-import { Flight , UserInfo } from '../../../common/interfaces';
+import { Flight  } from '../../../common/interfaces';
 export default function SecondStep(props:SecondStepProps) {
-  const {selectedFlight, userInfo}: {selectedFlight:Flight ,  userInfo :UserInfo} = props
+  const {selectedFlight}: {selectedFlight:Flight} = props
 
   const { flightTickets, bookedTickets } :{ flightTickets:number, bookedTickets:number }  = selectedFlight
   const [formData, setFormData] = useState<FormData>({

@@ -9,7 +9,7 @@ export default function Error() {
   return (
     <>
       <div className='errorPage'>
-        <Header name={"Error"} />
+        <Header name={"ERROR"} />
       </div>
       <Footer />
 

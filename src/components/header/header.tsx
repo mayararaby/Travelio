@@ -66,15 +66,15 @@ export default function Header(props: { name: string }) {
             </div>
 
             <div className='titleDescription'>
-              {props.name === 'Travelio' && <>
-                <div>
+              {props.name === 'TRAVELIO' && <>
+                <div className='descriptionFontSize'>
                   Escape to Your Ideal Destination
                 </div>
                 <div>
 
                   Create Unforgettable Memories
                 </div>
-                <div>
+                <div className='descriptionFontSize'>
 
                   Discover Your Dream
                 </div>
@@ -114,7 +114,7 @@ export default function Header(props: { name: string }) {
         <div className='discoverContainer'>
 
 
-          {props.name === 'Travelio' ? <Dropdown /> : null}
+          {props.name === 'TRAVELIO' ? <Dropdown /> : null}
         </div>
 
         <div>
