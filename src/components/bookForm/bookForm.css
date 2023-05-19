@@ -1,22 +1,26 @@
-.stepsContainer{
+.stepsContainer {
   margin: var(--main-margin-small);
 }
-.bookInfo,.previewInformation{
-  margin:var(--main-margin-small);
+
+.bookInfo,
+.previewInformation {
+  margin: var(--main-margin-small);
 }
-.previewInformation{
+
+.previewInformation {
   min-width: 60%;
 }
-.bookInfoInlineInput{
+
+.bookInfoInlineInput {
   width: 100%;
 }
 
-.airPlaneConfirmation{
+.airPlaneConfirmation {
   font-size: 30px;
 
 }
 
-.airPlaneConfirmationContainer{
+.airPlaneConfirmationContainer {
   font-family: 'Lilita One', cursive;
   display: flex;
   justify-content: space-between;
@@ -25,31 +29,39 @@
   flex-direction: row;
 }
 
-.badgePrice{
-  background-color:var(--success-color);
+.badgePrice {
+  background-color: var(--success-color);
   color: #fff;
   padding: 3px;
   border-radius: var(--border-radius)
-
 }
 
-.confirmButtonContainer{
+.confirmButtonContainer {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active,
-.css-4ff9q7.Mui-active{
+.css-4ff9q7.Mui-active {
   color: var(--main-color) !important;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
-.css-4ff9q7.Mui-completed{
+.css-4ff9q7.Mui-completed {
   color: var(--success-color) !important;
 }
 
-.userInfoContainer{
-  width: 70%;
+.userInfoContainer {
+  min-width: 70%;
+}
+
+.bookButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

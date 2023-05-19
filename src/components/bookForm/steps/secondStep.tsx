@@ -113,11 +113,13 @@ export default function SecondStep(props: SecondStepProps) {
             label="Number of tickets *" variant="outlined" />
         </div>
 
+        <div className='bookButton'>
         <Stack direction="row" spacing={2}>
           <CustomButton variant="contained" endIcon={<HowToRegIcon />} onClick={handelSubmit}>
             Next
           </CustomButton>
         </Stack>
+        </div>
       </div>
       {showSnack && <SnackbarCustom statue='error' open={showSnack} setOpen={setShowSnack} message={snackMessage} />}
     </>

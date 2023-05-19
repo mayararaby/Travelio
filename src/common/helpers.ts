@@ -47,6 +47,7 @@ export const mailFormulaValidation = (email: string): { message: string, error: 
  * @returns {date} formatted date
  */
 export const covertToTimeString = (dateString: string) => {
-  const date: Date = new Date(dateString);
+  if(dateString==="") return
+  const date: Date = new Date(dateString.replace("Z", "+00:00"));
   return date.toISOString().replace("T", " ").replace(/\.\d{3}Z/, "");
 }
