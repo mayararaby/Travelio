@@ -11,7 +11,7 @@
 .availableAirLinesTitle{
   font-family: 'Lilita One', cursive;
   font-size: 20px;
-  color: #F39C12;
+  color: var(--main-color);
   text-align: center;
 }
 

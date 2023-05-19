@@ -32,7 +32,7 @@
   font-weight: bold;
   justify-items: 50%;
   font-size: 90px;
-  color: #F39C12;
+  color: var(--main-color)
 
 }
 
@@ -57,11 +57,11 @@
 }
 
 .css-sghohy-MuiButtonBase-root-MuiButton-root{
-  background-color: #F39C12 !important;
+  background-color: var(--main-color) !important;
 }
 
 .css-sghohy-MuiButtonBase-root-MuiButton-root:hover{
-  background-color: #b4750e !important;
+  background-color: var(--main-color-hover) !important;
 }
 
 .centerSectionWidth{

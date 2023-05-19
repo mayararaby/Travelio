@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
-  color: #4BB543 !important;
+  color: var(--success-color)!important;
 }
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
-  color: #f39c12 !important;
+  color:var(--main-color) !important;
 
 }
 
 .stepsContainer{
-  margin: 20px;
+  margin: var(--main-margin-small);
 }
 .bookInfo,.previewInformation{
-  margin: 10px;  
+  margin:var(--main-margin-small);
   width: 70%;
 
 }
@@ -35,10 +35,10 @@
 }
 
 .badgePrice{
-  background-color:#4BB543;
+  background-color:var(--success-color);
   color: #fff;
   padding: 3px;
-  border-radius: 2px;
+  border-radius: var(--border-radius)
 
 }
 

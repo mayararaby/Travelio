@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 
-import './Error.css'
+import './error.css'
 export default function Error() {
 
 

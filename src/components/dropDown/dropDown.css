@@ -4,7 +4,7 @@
   font-family: 'Lilita One', cursive;
   margin: 10px;
   text-align: center;
-  color: #f39c12;
+  color: var(--main-color);
   font-size: 25px;
 
 }
@@ -27,7 +27,7 @@
 
 .buttonMainPosition{
   display: flex;
-    margin: 10px;
+    margin:var(--main-margin-small);
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;

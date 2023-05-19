@@ -6,7 +6,7 @@
 .bookFlightHeader{
   font-size: 50px;
   font-weight: bold;
-  color: #F39C12;
+  color: var(--main-color);
   font-family: 'Lilita One', cursive;
 
 
@@ -22,7 +22,7 @@
   align-items: center;
 }
 .bookFlightDescription{
-  color: #F39C12;
+  color: var(--main-color);
   font-family: 'Lilita One', cursive;
   font-size: 30px;
 
@@ -31,5 +31,5 @@
 
 .selectedDepartureTime{
   width: 70%;
-  margin: 20px;
+  margin: var(--main-margin-small);
 }

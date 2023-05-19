@@ -1,3 +1,14 @@
+:root {
+  --background-color:#fcfaf7;
+  --success-color :#4BB543;
+  --main-color :#f39c12;
+  --main-color-hover :#b4750e;
+  --border-radius :3px;
+  --main-margin-large :20px;
+  --main-margin-small :10px
+
+}
+
 html,.App,#root{
   height: 100%;
 }
@@ -5,7 +16,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color:rgb(235 217 217 / 6%);
   height: 100%;
   width: 100%;
 
