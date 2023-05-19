@@ -34,6 +34,7 @@ export default function BookForm(props: BookFormProps) {
 
   return (
     <>
+    
       <Box className='stepsContainer' sx={{ width: '100%' }}>
         <Stepper activeStep={activeStepIndex} alternativeLabel>
           {steps.map(label => (

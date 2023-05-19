@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMockedData, setSelectedTrip, setAvailableTrip, setUserInfo } from '../../../redux/actions/index'
@@ -12,7 +11,7 @@ import SnackbarCustom from '../../snackbarCustom/snackbarCustom';
 import { useNavigate } from 'react-router-dom';
 import { ThirdStepProps } from './interfaces';
 import { Flight, ReducerState, UserInfo, UserInfoFormData } from '../../../common/interfaces';
-
+import { CustomButton } from '../../customButton/customButton';
 export default function ThirdStep(props: ThirdStepProps) {
 
   const [showSnack, setShowSnack] = React.useState<boolean>(false)
@@ -162,9 +161,9 @@ export default function ThirdStep(props: ThirdStepProps) {
             </Typography>
             <div className='confirmButtonContainer'>
               <Stack direction="row" spacing={2}>
-                <Button variant="contained" onClick={handelConfirmation}>
+                <CustomButton variant="contained" onClick={handelConfirmation}>
                   Confirm
-                </Button>
+                </CustomButton>
               </Stack>
             </div>
           </CardContent>

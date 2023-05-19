@@ -1,11 +1,3 @@
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
-  color: var(--success-color)!important;
-}
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
-  color:var(--main-color) !important;
-
-}
-
 .stepsContainer{
   margin: var(--main-margin-small);
 }
@@ -45,4 +37,14 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active,
+.css-4ff9q7.Mui-active{
+  color: var(--main-color) !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
+.css-4ff9q7.Mui-completed{
+  color: var(--success-color) !important;
 }

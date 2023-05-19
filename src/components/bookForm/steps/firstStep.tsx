@@ -6,10 +6,10 @@ import { setSelectedTrip } from '../../../redux/actions/index'
 import { useDispatch } from "react-redux";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import SnackbarCustom from '../../snackbarCustom/snackbarCustom'
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import {FirstStepProps} from './interfaces'
 import { Flight } from '../../../common/interfaces';
+import { CustomButton } from '../../customButton/customButton';
 
 export default function FirstStep(props:FirstStepProps) {
   const [departureTime, setDepartureTime] = useState<number>(0);
@@ -59,6 +59,8 @@ export default function FirstStep(props:FirstStepProps) {
     const getSelectedTrip:Flight|undefined  = flight.find(trip=>trip.id === departureTime)
     getSelectedTrip&&dispatch(setSelectedTrip(getSelectedTrip));
   }
+
+  
   return (
     <>
       <div className='selectedDepartureTime'>
@@ -81,9 +83,9 @@ export default function FirstStep(props:FirstStepProps) {
       </div>
       <div>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" endIcon={<CheckCircleIcon />} onClick={handelNext}>
+          <CustomButton variant="contained" endIcon={<CheckCircleIcon />} onClick={handelNext}>
             Next
-          </Button>
+          </CustomButton>
         </Stack>
         {showSnack && <SnackbarCustom statue='error' open={showSnack} setOpen={setShowSnack} message={snackMessage} />}
       </div>

@@ -3,12 +3,12 @@ import TextField from '@mui/material/TextField';
 import { useDispatch} from "react-redux";
 import SnackbarCustom from '../../snackbarCustom/snackbarCustom';
 import { mailFormulaValidation } from '../../../common/helpers';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import {setUserInfo} from '../../../redux/actions/index'
 import { SecondStepProps ,FormData } from './interfaces';
 import { Flight  } from '../../../common/interfaces';
+import { CustomButton } from '../../customButton/customButton';
 export default function SecondStep(props:SecondStepProps) {
   const {selectedFlight}: {selectedFlight:Flight} = props
 
@@ -113,9 +113,9 @@ export default function SecondStep(props:SecondStepProps) {
       </div>
 
       <Stack direction="row" spacing={2}>
-        <Button variant="contained" endIcon={<HowToRegIcon />} onClick={handelSubmit}>
+        <CustomButton variant="contained" endIcon={<HowToRegIcon />} onClick={handelSubmit}>
           Next
-        </Button>
+        </CustomButton>
       </Stack>
       {showSnack && <SnackbarCustom statue='error' open={showSnack} setOpen={setShowSnack} message={snackMessage} />}
     </>

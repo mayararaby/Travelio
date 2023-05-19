@@ -55,15 +55,6 @@
 .discoverContainer{
   width: 25%;
 }
-
-.css-sghohy-MuiButtonBase-root-MuiButton-root{
-  background-color: var(--main-color) !important;
-}
-
-.css-sghohy-MuiButtonBase-root-MuiButton-root:hover{
-  background-color: var(--main-color-hover) !important;
-}
-
 .centerSectionWidth{
   width: 60%;
 }
