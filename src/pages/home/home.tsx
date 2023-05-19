@@ -7,6 +7,7 @@ import {setMockedData} from '../../redux/actions/index'
 
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
+import ResultCard from '../../components/resultCard/resultCard'
 
 export default function Home () {
   const Dispatch = useDispatch()
@@ -21,12 +22,29 @@ export default function Home () {
     flight: Flight[]
   }> = useSelector((state:ReducerState) => state.availableTrips)
 
+  console.log("🚀 ~ file: home.tsx:52 ~ Home ~ availableTrips:", availableTrips)
 
   return (
     <>
 
       <div className='pageContent'>
         <Header name={'Travelio'} />
+        {
+          Object.keys(availableTrips).length
+            ? <>
+            <div>
+              <div className="availableAirLinesTitle">
+                Available trips on this airPlane
+              </div>
+              <div className="availableAirLines">
+
+                {Object.keys(availableTrips).map(airPlane => (<ResultCard airPlaneDetails={availableTrips[airPlane]} airPlaneName={airPlane} />))}
+              </div>
+            </div>
+          </>
+            : null
+
+        }
       </div>
       <Footer />
     </>

@@ -46,3 +46,4 @@ export interface SearchData  {
   to: string
   [key: string]: string
 }
+
