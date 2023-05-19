@@ -6,6 +6,7 @@ import availableFlights from '../../mocks/availableFlights.json'
 import {setMockedData} from '../../redux/actions/index'
 
 import Header from '../../components/header/header'
+import Footer from '../../components/footer/footer'
 
 export default function Home () {
   const Dispatch = useDispatch()
@@ -26,8 +27,8 @@ export default function Home () {
 
       <div className='pageContent'>
         <Header name={'Travelio'} />
-
       </div>
+      <Footer />
     </>
   )
 }
