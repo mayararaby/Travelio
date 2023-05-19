@@ -3,7 +3,18 @@ import { type ReducerState } from '../../common/interfaces'
 
 const initialState: ReducerState = {
   mockedData: [],
-  selectedFlight: {},
+  selectedFlight: {
+    id: 0,
+    airline: '',
+    flightNumber: '',
+    departureAirport: '',
+    departureTime: '',
+    arrivalAirport: '',
+    arrivalTime: '',
+    price: 0,
+    flightTickets: 0,
+    bookedTickets: 0
+  },
   availableTrips: {},
   userInfo: {
     formData: {
@@ -17,7 +28,7 @@ const initialState: ReducerState = {
   }
 }
 
-export const flights = (state = initialState, action:{type:string,payload:any}) => {
+export const flights = (state = initialState, action: { type: string, payload: any }) => {
   switch (action.type) {
     case ActionTypes.GET_MOCKED_DATA:
       return {

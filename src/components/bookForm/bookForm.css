@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
+  color: #4BB543 !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
+  color: #f39c12 !important;
+
+}
+
+.stepsContainer{
+  margin: 20px;
+}
+.bookInfo,.previewInformation{
+  margin: 10px;  
+  width: 70%;
+
+}
+.bookInfoInlineInput{
+  width: 100%;
+}
+
+.airPlaneConfirmation{
+  font-size: 30px;
+
+}
+
+.airPlaneConfirmationContainer{
+  font-family: 'Lilita One', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.badgePrice{
+  background-color:#4BB543;
+  color: #fff;
+  padding: 3px;
+  border-radius: 2px;
+
+}
+
+.confirmButtonContainer{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}

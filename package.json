@@ -29,6 +29,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/react-animations": "^1.0.0",
     "cz-conventional-changelog": "^3.3.0"
   },
   "scripts": {

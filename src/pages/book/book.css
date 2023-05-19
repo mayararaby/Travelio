@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+
+.bookContainer{
+  min-height: 95%;
+}
+.bookFlightHeader{
+  font-size: 50px;
+  font-weight: bold;
+  color: #F39C12;
+  font-family: 'Lilita One', cursive;
+
+
+}
+
+.bookSectionCenter{
+  text-align: center;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.bookFlightDescription{
+  color: #F39C12;
+  font-family: 'Lilita One', cursive;
+  font-size: 30px;
+
+
+}
+
+.selectedDepartureTime{
+  width: 70%;
+  margin: 20px;
+}

@@ -22,7 +22,6 @@ export default function Home () {
     flight: Flight[]
   }> = useSelector((state:ReducerState) => state.availableTrips)
 
-  console.log("🚀 ~ file: home.tsx:52 ~ Home ~ availableTrips:", availableTrips)
 
   return (
     <>

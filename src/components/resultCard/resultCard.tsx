@@ -8,8 +8,9 @@ import Southwest from '../../assets/AirLine/Southwest.jpg'
 import Alaska from '../../assets/AirLine/Alaska.jpg'
 import './resultCard.css'
 import {ImageSrc , ResultCardProps} from './interfaces'
+import {Flight} from '../../common/interfaces'
+
 export default function ResultCard(props:ResultCardProps) {
-  console.log("🚀 ~ file: resultCard.tsx:12 ~ ResultCard ~ props:", props)
   const imageSrc:ImageSrc = {
     United,
     American,
@@ -18,8 +19,10 @@ export default function ResultCard(props:ResultCardProps) {
     Southwest,
     Alaska
   }
-  const { flight, price } = props.airPlaneDetails
-  const [showText, setShowText] = useState(false);
+
+  const { flight, price }:{ flight:Flight[], price:number} = props.airPlaneDetails
+
+  const [showText, setShowText] = useState<boolean>(false);
   const navigate = useNavigate()
 
   const handelBook = () => {
