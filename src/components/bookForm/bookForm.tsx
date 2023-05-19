@@ -24,10 +24,12 @@ export default function BookForm(props: BookFormProps) {
   const selectedFlight = useSelector((state: ReducerState) => state.selectedFlight)
   const userInfo = useSelector((state: ReducerState) => state.userInfo)
 
+  /**
+   * set Active step index 
+   */
   useEffect(() => {
     selectedFlight.id !== 0 && setActiveStepIndex(1)
     userInfo.nextStep && setActiveStepIndex(2)
-
   }, [userInfo, selectedFlight])
 
   return (

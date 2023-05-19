@@ -17,21 +17,23 @@ export default function FirstStep(props:FirstStepProps) {
   const [snackMessage, setSnackMessage] = useState<string>('')
 
   const { flight } = props.flightInfo.airPlaneDetails
-  const { selectedFlight } = props
+  // const { selectedFlight } = props
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if ((selectedFlight as Flight).id !== 0) {
-      setDepartureTime((selectedFlight as Flight).id);
-    }
-  }, [selectedFlight])
-
+  /**
+   * save selected departure time
+   * @param event on change event
+   */
   const handleChange = (event:SelectChangeEvent<number>) => {
     setDepartureTime(event.target.value as number)
   }
 
 
+  /**
+   * create select options with available departure times
+   * @returns {JSX}
+   */
   const returnOptions = () => {
     return flight.map((oneFlight) => {
       return (
@@ -43,6 +45,10 @@ export default function FirstStep(props:FirstStepProps) {
   };
 
 
+  /**
+   * get the next step and display snackbar if user try to get the next step before select time
+   * @returns {Void}
+   */
   const handelNext = () => {
     if (!departureTime) {
       setSnackMessage('Please choose departure time')

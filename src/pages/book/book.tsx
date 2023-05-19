@@ -17,11 +17,13 @@ export default function Book() {
   const availableTripsStored = useSelector((state:ReducerState) => state.availableTrips)
 
   useEffect(() => {
+    //check if there is no selected trip back to home 
     if (!Object.keys(availableTripsStored).length) navigate('/')
   }, [availableTripsStored, navigate])
 
   const airPlaneName:string = location.state?.airPlaneName
   
+  // add soma animation
   const SlideInLeftAnimation = keyframes`${slideInLeft}`;
   const StyledDivLeft = styled.div`
     animation: 2s ${SlideInLeftAnimation};`;
@@ -29,9 +31,6 @@ export default function Book() {
   const SlideInRightAnimation = keyframes`${slideInRight}`;
   const StyledDivRight = styled.div`
   animation: 1s ${SlideInRightAnimation};`;
-
-
-
 
   return (
     <>
@@ -41,7 +40,6 @@ export default function Book() {
             <img src={leftImage} alt='leftImage' className='imageSize' />
           </StyledDivLeft>
         </div>
-
 
         <div className='centerSectionWidth bookSectionCenter'>
           <div className='bookFlightHeader'>

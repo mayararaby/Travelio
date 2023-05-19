@@ -1,5 +1,10 @@
 import { type Flight } from './interfaces'
 
+/**
+ * mapping all flights in the same air plane
+ * @param {Flight[]} flights available flights
+ * @returns {Record<string, {price: number,flight: Flight[]}>} flightsByAirline  
+ */
 export const mapAllAirplanes = (flights: Flight[]): Record<string, {
   price: number
   flight: Flight[]
@@ -25,6 +30,11 @@ export const mapAllAirplanes = (flights: Flight[]): Record<string, {
   return flightsByAirline
 }
 
+/**
+ * check if the email is a valid email 
+ * @param {string} email 
+ * @returns  { message: string, error: boolean } if not a valid email will display a message  based on error  
+ */
 export const mailFormulaValidation = (email: string): { message: string, error: boolean } => {
   if (email === '') return { message: 'Empty field!', error: true }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/

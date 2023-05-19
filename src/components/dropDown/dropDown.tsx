@@ -22,16 +22,29 @@ export default function Dropdown() {
     to: '',
   })
 
+  /**
+   * return available air planes in options and filter the other option to remove from it the selected
+   * Example: if you select JFK in (to dropdown) this option will not displayed on (from dropdown) 
+   * @param targetFilter  string of the other dropdown 
+   * @returns {AvailableAirports Array<string>}
+   */
   const returnOptions = (targetFilter: string) => {
     const availableAirportsWithoutTargetSelection: Array<string> = availableAirports.filter(airPort => airPort !== formData[targetFilter])
     return availableAirportsWithoutTargetSelection.map(airPort => (<MenuItem key={airPort} value={airPort}>{airPort}</MenuItem>))
   }
 
+  /**
+   * 
+   * @param event onChange event
+   */
   const handleChange = (event: { target: { name: string, value: string } }) => {
     const { name, value } = event.target
     setFormData({ ...formData, [name]: value })
   }
 
+  /**
+   * Filter the trips and get all trips with the (From - To) selected options
+   */
   const handelSubmit = () => {
     const availableTrips :Flight[]= availableFlights.filter(flight => flight.departureAirport === formData.from && flight.arrivalAirport === formData.to)
     const performAvailableTrips:Record<string, {

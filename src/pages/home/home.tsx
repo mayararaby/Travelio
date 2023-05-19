@@ -14,6 +14,7 @@ export default function Home () {
 
 
   useEffect(() => {
+    //saved mocked data to redux store
     Dispatch(setMockedData(availableFlights))
   }, [])
 

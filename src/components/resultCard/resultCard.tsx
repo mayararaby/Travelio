@@ -25,6 +25,7 @@ export default function ResultCard(props:ResultCardProps) {
   const [showText, setShowText] = useState<boolean>(false);
   const navigate = useNavigate()
 
+  // navigate to book form when user click on air plane
   const handelBook = () => {
     navigate("/book",{state:props});
   }

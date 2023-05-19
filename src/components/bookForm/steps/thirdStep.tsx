@@ -27,6 +27,9 @@ export default function ThirdStep(props: ThirdStepProps) {
   const navigate = useNavigate()
 
 
+  /**
+   * if user confirm his reservation will delete the booked trip and navigate back to home and reset stored informations
+   */
   const handelConfirmation = () => {
     const flightsAfterConfirmation = mockedData?.map(flight => {
       if (flight.id === id) {
@@ -70,6 +73,9 @@ export default function ThirdStep(props: ThirdStepProps) {
     }))
   }
 
+  /**
+   * navigate back to home 
+   */
   const navigateToHome = () => {
     setTimeout(() => {
       navigate('/')

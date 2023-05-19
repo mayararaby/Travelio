@@ -22,16 +22,16 @@ export default function SecondStep(props:SecondStepProps) {
     departureTime: selectedFlight.departureTime,
   });
 
-  useEffect(()=>{
-    const savedOldData ={...userInfo.formData}
-    setFormData({ ...formData, ...savedOldData});
-    
-  },[])
+  
   const [showSnack, setShowSnack] = useState<boolean>(false)
   const [snackMessage, setSnackMessage] = useState <string>('')
 
   const dispatch = useDispatch();
-  
+  /**
+   * save form and check on available tickets
+   * @param event onChange event
+   * @returns {void}
+   */
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     if (name === "tickets" && parseInt(value) > flightTickets - bookedTickets) {
@@ -42,6 +42,10 @@ export default function SecondStep(props:SecondStepProps) {
     setFormData({ ...formData, [name]: value.trim() });
   };
 
+  /**
+   * get the next step
+   * @returns {void}
+   */
   const handelSubmit = () => {
     if(!validateFields(formData)){
       setSnackMessage('Please complete all required fields')
@@ -51,6 +55,11 @@ export default function SecondStep(props:SecondStepProps) {
     dispatch(setUserInfo({formData,nextStep:true}))
   }
 
+  /**
+   * check if user enter all fields values
+   * @param {FormData} formData user main information 
+   * @returns {boolean}
+   */
   const validateFields =(formData:FormData)=>{
     const {firstName, lastName ,email,mobileNumber} = formData
     if (firstName==='' || lastName==='' || mobileNumber==='' ||mailFormulaValidation(email).error) return false

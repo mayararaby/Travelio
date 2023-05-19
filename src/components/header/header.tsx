@@ -14,6 +14,7 @@ import line from '../../assets/Header/line.png'
 export default function Header(props: { name: string }) {
 
 
+  //animation
   const SlideInLeftAnimation = keyframes`${slideInLeft}`;
   const StyledDivLeft = styled.div`
     animation: 2s ${SlideInLeftAnimation};`;

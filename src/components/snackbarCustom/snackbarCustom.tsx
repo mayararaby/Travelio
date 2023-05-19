@@ -4,6 +4,7 @@ import {SnackbarCustomProps} from './interface'
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 export default function SnackbarCustom(props:SnackbarCustomProps) {
+  // open and close snack bar
   const handleClose = () => {
     props.setOpen(false);
   };
