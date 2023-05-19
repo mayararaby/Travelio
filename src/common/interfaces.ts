@@ -14,7 +14,10 @@ export interface Flight {
 export interface ReducerState {
   mockedData: Flight[]
   selectedFlight: Flight | Record<string, unknown>
-  availableTrips: Flight[]
+  availableTrips: Record<string, {
+    price: number
+    flight: Flight[]
+  }>
   userInfo: {
     formData: {
       firstName: string
@@ -36,4 +39,10 @@ export interface UserInfo {
     tickets: number
   }
   nextStep: boolean
+}
+
+export interface SearchData  {
+  from: string
+  to: string
+  [key: string]: string
 }

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+
+.availableAirLines{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.availableAirLinesTitle{
+  font-family: 'Lilita One', cursive;
+  font-size: 20px;
+  color: #F39C12;
+  text-align: center;
+}
+
+.pageContent{
+  min-height: 95%;
+}

@@ -4,7 +4,7 @@ import { type ReducerState } from '../../common/interfaces'
 const initialState: ReducerState = {
   mockedData: [],
   selectedFlight: {},
-  availableTrips: [],
+  availableTrips: {},
   userInfo: {
     formData: {
       firstName: '',

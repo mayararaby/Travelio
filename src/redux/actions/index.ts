@@ -17,7 +17,10 @@ export const setSelectedTrip = (payload:Flight) => ({
   payload
 })
 
-export const setAvailableTrip = (payload:Flight[]) => ({
+export const setAvailableTrip = (payload: Record<string, {
+  price: number
+  flight: Flight[]
+}>) => ({
   type: AVAILABLE_TRIPS,
   payload
 })

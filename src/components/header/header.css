@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cookie&family=Dosis:wght@300;400;500;600;700;800&family=Lilita+One&family=Mogra&display=swap');
+.mainHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.centerHeaderContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.centerHeaderContainerSecondSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.mockedDiv {
+  width: 100px;
+}
+
+.titleText {
+  font-family: 'Lilita One', cursive;
+  font-weight: bold;
+  justify-items: 50%;
+  font-size: 90px;
+  color: #F39C12;
+
+}
+
+.titleDescription {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Cookie', cursive;
+
+}
+
+.travel{
+  right: 8%;
+  position: absolute;
+}
+
+.discoverContainer{
+  width: 25%;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+  background-color: #F39C12 !important;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: #b4750e !important;
+}
+
+.centerSectionWidth{
+  width: 60%;
+}
+
+.fullSectionWidth{
+  width: 100%;
+}
+
